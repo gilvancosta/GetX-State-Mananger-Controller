@@ -5,6 +5,10 @@ import 'ui/pages/con_controller/controller/controller.dart';
 import 'ui/pages/con_controller/controller_page.dart';
 import 'ui/pages/first_rebuild/controller/first_rebuild_controller.dart';
 import 'ui/pages/first_rebuild/first_rebuild_page.dart';
+import 'ui/pages/full_live_cycle/controller/full_live_cycle_controller.dart';
+import 'ui/pages/full_live_cycle/full_live_cycle_page.dart';
+import 'ui/pages/getx_build/controller/getx_build_controller.dart';
+import 'ui/pages/getx_build/getx_build_page.dart';
 import 'ui/pages/getx_widget/controller/getx_widget_controller.dart';
 import 'ui/pages/getx_widget/getx_widget_page.dart';
 import 'ui/pages/home/home_page.dart';
@@ -47,8 +51,18 @@ class MyApp extends StatelessWidget {
         ),
         GetPage(
           name: '/first-rebuild',
-         // binding: BindingsBuilder.put(() => FirstRebuildController()),
+          // binding: BindingsBuilder.put(() => FirstRebuildController()),
           page: () => const FirstRebuildPage(),
+        ),
+        GetPage(
+          name: '/getx-build',
+          binding: BindingsBuilder.put(() => GetxBuildController()),
+          page: () => const GetxBuildPage(),
+        ),
+        GetPage(
+          name: '/full_live_cycle',
+          binding: BindingsBuilder.put(() => FullLiveCycleController()),
+          page: () => const FullLiveCyclePage(),
         ),
       ],
     );

@@ -44,6 +44,18 @@ class HomePage extends StatelessWidget {
                 },
                 child: const Text('Page First Rebuild')),
             const SizedBox(height: 20),
+            ElevatedButton(
+                onPressed: () {
+                  Get.toNamed('/getx-build');
+                },
+                child: const Text('Page GetX Build')),
+            const SizedBox(height: 20),
+            ElevatedButton(
+                onPressed: () {
+                  Get.toNamed('/full_live_cycle');
+                },
+                child: const Text('Full Live Cycle')),
+            const SizedBox(height: 20),
           ],
         ),
       ),
