@@ -4,9 +4,11 @@ import 'package:get/get.dart';
 
 class Controller extends GetxController {
 
-  final name = 'Gilvan Costa'.obs;
+  final _name = 'Gilvan Costa'.obs;
 
-  void setName(String value) => name.value = value;
+  String get name => _name.value;
+
+  void setName(String value) => _name.value = value;
 
 
 

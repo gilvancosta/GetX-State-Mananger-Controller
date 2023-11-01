@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'ui/con_controller/controller/controller.dart';
-import 'ui/con_controller/controller_page.dart';
+import 'ui/pages/con_controller/controller/controller.dart';
+import 'ui/pages/con_controller/controller_page.dart';
+import 'ui/pages/first_rebuild/controller/first_rebuild_controller.dart';
+import 'ui/pages/first_rebuild/first_rebuild_page.dart';
+import 'ui/pages/getx_widget/controller/getx_widget_controller.dart';
+import 'ui/pages/getx_widget/getx_widget_page.dart';
 import 'ui/pages/home/home_page.dart';
+import 'ui/pages/local_state/local_state_widget.dart';
+import 'ui/pages/workers/controller/worker_controller.dart';
+import 'ui/pages/workers/worker_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -23,6 +30,25 @@ class MyApp extends StatelessWidget {
           name: '/getx-controller',
           binding: BindingsBuilder.put(() => Controller()),
           page: () => const ControllerPage(),
+        ),
+        GetPage(
+          name: '/getx-widget',
+          binding: BindingsBuilder.put(() => GetxWidgetController()),
+          page: () => const GetxWidgetPage(),
+        ),
+        GetPage(
+          name: '/local-state-widget',
+          page: () => const LocalStateWidget(),
+        ),
+        GetPage(
+          name: '/workers',
+          binding: BindingsBuilder.put(() => WorkerController()),
+          page: () => const WorkerPage(),
+        ),
+        GetPage(
+          name: '/first-rebuild',
+         // binding: BindingsBuilder.put(() => FirstRebuildController()),
+          page: () => const FirstRebuildPage(),
         ),
       ],
     );

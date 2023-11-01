@@ -21,11 +21,17 @@ class _ControllerPageState extends State<ControllerPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Obx(() => Text('Nome: ${Get.find<Controller>().name.value}')),
+            Obx(() => Text('Nome: ${Get.find<Controller>().name}')),
             const SizedBox(height: 20),
             ElevatedButton(
                 onPressed: () {
                   Get.find<Controller>().setName('Gilvan Araujo');
+                  /* 
+                  Get.reload<Controller>();
+                  setState(() {}); 
+                  */
+
+
                 },
                 child: const Text('GetX Controller')),
           ],

@@ -20,6 +20,30 @@ class HomePage extends StatelessWidget {
                 },
                 child: const Text('Page Controller')),
             const SizedBox(height: 20),
+            ElevatedButton(
+                onPressed: () {
+                  Get.toNamed('/getx-widget');
+                },
+                child: const Text('Page GetX-Widget')),
+            const SizedBox(height: 20),
+            ElevatedButton(
+                onPressed: () {
+                  Get.toNamed('/local-state-widget');
+                },
+                child: const Text('Page Local State Widget')),
+            const SizedBox(height: 20),
+            ElevatedButton(
+                onPressed: () {
+                  Get.toNamed('/workers');
+                },
+                child: const Text('Page Workers')),
+            const SizedBox(height: 20),
+            ElevatedButton(
+                onPressed: () {
+                  Get.toNamed('/first-rebuild');
+                },
+                child: const Text('Page First Rebuild')),
+            const SizedBox(height: 20),
           ],
         ),
       ),
